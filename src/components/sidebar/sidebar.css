@@ -27,6 +27,11 @@ ul {
     font-size: 1.5rem;
     color: var(--title-color);
     font-weight: var(--font-bold);
+    transition: .3s;
+}
+
+.nav__link:hover {
+    color: hsl(13,93%,65%)
 }
 
 .copyright {
