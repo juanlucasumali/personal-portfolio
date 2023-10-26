@@ -89,15 +89,3 @@
     transform: translate(-50%);
     animation: ani-mouse 2s linear infinite;
 }
-
-.shapes {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-}
-
-.shape {
-    position: absolute;
-}

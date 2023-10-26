@@ -124,7 +124,7 @@ margin: 0 auto;
 }
 
 .section__title::before {
-  content: ''; 
+  content: ""; 
   background-color: url(./assets/dots-bg.svg);
   height: 2.25rem;
   width: 2.25rem;
