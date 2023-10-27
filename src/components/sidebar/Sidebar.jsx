@@ -6,7 +6,6 @@ const Sidebar = () => {
     return (
         <aside className='aside'>
             <a href="#home" className="nav__logo">
-                <img src={Logo} alt="" />
             </a>
 
             <nav className="nav">
@@ -54,7 +53,7 @@ const Sidebar = () => {
             </nav>
 
             <div className="nav__footer">
-                <span className="copyright">&copy; 2022 - 2023</span>
+                <span className="copyright">&copy; 2023 • JLU</span>
             </div>
 
         </aside>

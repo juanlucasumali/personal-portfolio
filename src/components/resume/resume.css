@@ -1,13 +1,12 @@
 .resume.section {
     position: relative;
     min-height: 100vh;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .resume__title-container {
-    margin-top: -9rem;
+    margin-top: -1rem;
 }
 
 .resume__container {
@@ -18,7 +17,6 @@
 .timeline {
     background-color: var(--container-color);
     padding: 1.875rem;
-    padding-right: 12rem;
     border-radius: var(--border-radius);
     position: relative;
     box-shadow: var(--shadow);

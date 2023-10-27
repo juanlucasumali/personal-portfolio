@@ -51,47 +51,37 @@
     width: 100%;
 }
 
-.home__scroll-name {
-    font-size: var(--small-font-size);
+.arrow__wrapper {
+    text-align: center;
 }
 
-.mouse {
-    border: 2px solid #82817c;
-    display: block;
-    height: 1.6rem;
-    width: 1.25rem;
-    margin: auto;
+.arrows {
+    display: inline-block;
     margin-top: .75rem;
-    border-radius: 1rem;
-    position: relative;
+    animation: bobUpDown 1s ease-in-out infinite;
 }
 
-@keyframes ani-mouse {
-    0% {
-        top: 29%;
-    }
+.arrow {
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 0.625rem solid transparent;
+    border-right: 0.625rem solid transparent;
+    border-top: 0.875rem solid var(--subtitle-color); /* This makes the arrow point downwards */
+    margin: 0.2rem auto;
+    background-color: transparent; /* Ensure the arrow is hollow */
+    transition: border-top-color 0.3s ease; /* Smooth transition for color change */
+}
 
-    15% {
-        top: 50%;
-    }
+.arrow:hover {
+    border-top-color: var(--first-color); /* Changes color to orange on hover */
+}
 
+@keyframes bobUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
     50% {
-        top: 50%;
+        transform: translateY(0.25rem);
     }
-    
-    100% {
-        top: 29%;
-    }
-}
-
-.wheel {
-    background-color: #82817c;;
-    border-radius: 100%;
-    width: 0.25rem;
-    height: 0.25rem;
-    position: absolute;
-    top: .5rem;
-    left: 50%;
-    transform: translate(-50%);
-    animation: ani-mouse 2s linear infinite;
 }

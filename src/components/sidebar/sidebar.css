@@ -17,6 +17,32 @@ ul {
     list-style-type: none;
 }
 
+.nav__logo {
+    display: inline-block;
+    width: 2rem; 
+    height: 2rem; 
+    border-radius: 50%;  
+    background-color: #f97855;  
+    text-align: center;
+    line-height: 2rem; /* Adjusted from 128px to match the height for vertical centering */
+    overflow: hidden; 
+    transition: box-shadow 0.2s ease-in-out; /* Target the box-shadow property */
+}
+
+.nav__logo:hover {
+    box-shadow: 0 0 8px #ff7f00, 0 0 15px #ff7f00, 0 0 22px #ff7f00;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 8px #ff7f00, 0 0 15px #ff7f00, 0 0 22px #ff7f00;
+    }
+    50% {
+        box-shadow: 0 0 11px #ff7f00, 0 0 18px #ff7f00, 0 0 25px #ff7f00;
+    }
+}
+
+
 .nav__list {
     display: flex;
     flex-direction: column;
