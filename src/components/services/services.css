@@ -1,3 +1,15 @@
+.section.services {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.services__title-container {
+    margin-top: -12rem;
+}
+
 .services__container {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 1.875rem;

@@ -1,7 +1,21 @@
+.about.section {
+    padding-bottom: 6.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Adjusts the height to fill the viewport */
+}
+
+.about__title-container {
+    margin-top: -7em;
+}
+
 .about__container {
     grid-template-columns: 1fr 9fr;
     column-gap: 1.875rem;
     justify-content: center;
+    z-index: 1;
 }
 
 .about__img {
