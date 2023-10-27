@@ -1,11 +1,11 @@
 .about__container {
-    grid-template-columns: 2.5fr 9fr;
+    grid-template-columns: 1fr 9fr;
     column-gap: 1.875rem;
     justify-content: center;
 }
 
 .about__img {
-    justify-self: right;
+    justify-self: left;
 }
 
 .about__data {

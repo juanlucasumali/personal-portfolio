@@ -9,8 +9,8 @@
   --title-color: hsl(45,8%,20%);
   --subtitle-color: hsl(50,2%,48%);
   --text-color: hsl(244, 16%, 43%);
-  --body-color: hsl(0,5%,96%)
-  --container-color: #efefef;
+  --body-color: hsl(0,5%,96%);
+  --container-color: hsl(0,0%,94%);
 
 /*=============== Font and Typography ===============*/
 /* .5rem = 8px | 1rem = 16px ... */
@@ -28,7 +28,7 @@
 --font-bold: 700;
 
 /*=============== Box Shadow ===============*/
---shadow: 0px 5px 20px 0px rgb(69, 67, 96 / 10%);
+--shadow: 0px 5px 20px 0px rgb(209,208,207);
 
 
 /*=============== Border Radius ===============*/
