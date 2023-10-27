@@ -1,7 +1,6 @@
 import React from 'react';
 import "./home.css";
-import Me from "../../assets/avatar-1.svg";
-import Uno from '../Uno';
+import Uno from '../uno/Uno';
 import HeaderSocials from './HeaderSocials';
 import ScrollDown from './ScrollDown';
 
@@ -15,8 +14,6 @@ const Home = () => {
                 </span>
             
             <HeaderSocials />
-
-            <a href="#contact" className="btn">hire me</a>
 
             <ScrollDown />
 

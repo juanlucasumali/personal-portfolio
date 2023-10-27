@@ -36,7 +36,7 @@ const Uno = () => {
         const xOffset = (mousePos.x - faceCenter.x) / window.innerWidth * 10;
         const yOffset = (mousePos.y - faceCenter.y) / window.innerHeight * 10;
 
-        setFacePos({ x: xOffset, y: yOffset });
+        setFacePos({ x: xOffset * 1.1, y: yOffset * 2.4 });
         setShadowPos({ x: xOffset * 0.5, y: yOffset * 0.5 - 2 });
 
         // Movement for eyes based on mouse direction
@@ -52,11 +52,18 @@ const Uno = () => {
         window.addEventListener('resize', updateFaceCenter);
         return () => window.removeEventListener('resize', updateFaceCenter);
     }, []);
+    
+    // Ensure the face center updates when the window is scrolled
+    useEffect(() => {
+        window.addEventListener('scroll', updateFaceCenter);
+        return () => window.removeEventListener('scroll', updateFaceCenter);
+    }, []);
+
 
     return (
         <svg 
             ref={svgRef} 
-            viewBox="0 0 36 36" 
+            viewBox="-5 -5 46 46" 
             fill="none" 
             role="img" 
             xmlns="http://www.w3.org/2000/svg" 
@@ -65,20 +72,14 @@ const Uno = () => {
             onMouseEnter={() => setHovered(true)} 
             onMouseLeave={() => setHovered(false)}
         >
-            <mask id="faceMask" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
-                <rect width="36" height="36" rx="72" fill="#FFFFFF"></rect>
-            </mask>
-            <g mask="url(#faceMask)">
-                <rect width="36" height="36" fill="#0a0310"></rect>
-                <rect x="0" y="0" width="36" height="36" transform={`translate(${shadowPos.x} ${shadowPos.y + 2}) rotate(87 18 18) scale(1)`} fill="#f97855" rx="36"></rect>
-                <g transform={`translate(${facePos.x} ${facePos.y})`}>
-                    {hovered ? 
-                        <circle cx="18" cy="20" r="3" fill="#000000" /> : 
-                        <path d="M15 18c2 1 4 1 6 0" stroke="#000000" fill="none" strokeLinecap="round"></path>
-                    }
-                    <rect x="10" y="15" width="1.5" height="2" rx="1" stroke="none" fill="#000000" transform={`translate(${leftEyePos.x} ${leftEyePos.y})`}></rect>
-                    <rect x="24" y="15" width="1.5" height="2" rx="1" stroke="none" fill="#000000" transform={`translate(${rightEyePos.x} ${rightEyePos.y})`}></rect>
-                </g>
+            <rect x="0" y="0" width="36" height="36" transform={`translate(${shadowPos.x} ${shadowPos.y + 2}) rotate(87 18 18) scale(1)`} fill="#f97855" rx="36"></rect>
+            <g transform={`translate(${facePos.x} ${facePos.y})`}>
+                {hovered ? 
+                    <circle cx="18" cy="20" r="3" fill="#000000" /> : 
+                    <path d="M15 18c2 1 4 1 6 0" stroke="#000000" fill="none" strokeLinecap="round"></path>
+                }
+                <rect x="10" y="15" width="1.5" height="2" rx="1" stroke="none" fill="#000000" transform={`translate(${leftEyePos.x} ${leftEyePos.y})`}></rect>
+                <rect x="24" y="15" width="1.5" height="2" rx="1" stroke="none" fill="#000000" transform={`translate(${rightEyePos.x} ${rightEyePos.y})`}></rect>
             </g>
         </svg>
     );

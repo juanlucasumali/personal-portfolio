@@ -9,6 +9,7 @@
 .intro {
     max-width: 540px;
     text-align: center;
+    margin-top: -5rem;
 }
 
 .home__img {
@@ -21,10 +22,14 @@
     margin-bottom: 0.5rem;
 }
 
+.home__education {
+    color: var(--subtitle-color);
+}
+
 .home__socials {
     display: flex;
     column-gap: 1.75rem;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
     justify-content: center;
 }
 
@@ -35,7 +40,7 @@
 }
 
 .home__social-link:hover {
-    color: hsl(13,93%,65%)
+    color: var(--first-color)
 }
 
 .scroll__down {

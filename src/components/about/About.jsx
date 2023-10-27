@@ -1,7 +1,7 @@
 import React from 'react';
 import "./about.css"
 import Image from '../../assets/avatar-2.svg'
-import AboutBox from './AboutBox';
+import UnoAbout from '../uno/UnoAbout';
 
 const About = () => {
     return (
@@ -9,7 +9,9 @@ const About = () => {
             <h2 className="section__title">about me</h2>
 
             <div className="about__container grid">
-                <img src={Image} alt="" className="about__img" />
+                <div className="about__img">
+                <UnoAbout />
+                </div>
 
                 <div className="about__data grid">
                     <div className="about__info">
@@ -55,14 +57,9 @@ const About = () => {
                                 <span className="skills__percentage photography"></span>
                             </div>
                         </div>
-
                     </div>
-
-
                 </div>
             </div>
-
-        <AboutBox />
         </section>
     )
 }
