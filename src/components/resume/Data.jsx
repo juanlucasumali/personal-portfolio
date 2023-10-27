@@ -1,6 +1,7 @@
 const Data = [
     {
         id: 1,
+        category: "education",
         icon: "icon-graduation",
         year: "2019 - present",
         title: "Academic Degree",
@@ -8,6 +9,7 @@ const Data = [
     },
     {
         id: 2,
+        category: "experience",
         icon: "icon-briefcase",
         year: "2019 - present",
         title: "Academic Degree",
@@ -15,6 +17,7 @@ const Data = [
     },
     {
         id: 3,
+        category: "experience",
         icon: "icon-briefcase",
         year: "2019 - present",
         title: "Academic Degree",
@@ -22,6 +25,7 @@ const Data = [
     },
     {
         id: 4,
+        category: "experience",
         icon: "icon-briefcase",
         year: "2019 - present",
         title: "Academic Degree",
