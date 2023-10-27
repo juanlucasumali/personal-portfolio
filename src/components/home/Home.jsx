@@ -2,7 +2,6 @@ import React from 'react';
 import "./home.css";
 import Uno from '../uno/Uno';
 import HeaderSocials from './HeaderSocials';
-import ScrollDown from './ScrollDown';
 
 const Home = () => {
     return (
@@ -14,8 +13,6 @@ const Home = () => {
                 </span>
             
             <HeaderSocials />
-
-            <ScrollDown />
 
             </div>
         </selection>
