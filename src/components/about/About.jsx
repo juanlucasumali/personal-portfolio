@@ -1,7 +1,7 @@
 import React from 'react';
 import "./about.css"
-import Image from '../../assets/avatar-2.svg'
 import UnoAbout from '../uno/UnoAbout';
+import Services from '../services/Services';
 
 const About = () => {
     return (
@@ -24,44 +24,10 @@ const About = () => {
                             <a href="" className="btn">download resume</a>
                         </div>
 
-                        <div className="about__skills grid">
-                            
-                            <div className="skills__data">
-                                <div className="skills__titles">
-                                    <h3 className="skills__name">Software Engineer</h3>
-                                    <span className="skills__number">90%</span>
-                                </div>
-
-                                <div className="skills__bar">
-                                    <span className="skills__percentage development"></span>
-                                </div>
-                            </div>
-
-                            <div className="skills__data">
-                                <div className="skills__titles">
-                                    <h3 className="skills__name">Artist</h3>
-                                    <span className="skills__number">80%</span>
-                                </div>
-
-                                <div className="skills__bar">
-                                    <span className="skills__percentage ui__design"></span>
-                                </div>
-                            </div>
-
-                            <div className="skills__data">
-                                <div className="skills__titles">
-                                    <h3 className="skills__name">Curious</h3>
-                                    <span className="skills__number">100%</span>
-                                </div>
-
-                                <div className="skills__bar">
-                                    <span className="skills__percentage photography"></span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
+        <Services />
         </section>
     )
 }

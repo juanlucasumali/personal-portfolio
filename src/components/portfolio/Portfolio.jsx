@@ -1,31 +1,40 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./portfolio.css"
 import Menu from './Menu';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 const Portfolio = () => {
     const [items, setItems] = useState(Menu);
+    const navigate = useNavigate();
+    const { category } = useParams();
+
     const filterItem = (categoryItem) => {
         const updatedItems = Menu.filter((curElem) => {
             return curElem.category === categoryItem;
         });
 
         setItems(updatedItems);
-    }
+    };
+
+    useEffect(() => {
+        if (category) {
+            filterItem(category);
+        } else {
+            setItems(Menu);
+        }
+    }, [category]);
+
     return (
         <section className="portfolio container section" id="portfolio">
             <div className="work__title-container">
                 <h2 className="section__title">recent works</h2>
 
                 <div className="work__filters">
-                    <span className="work__item" onClick={() => setItems(Menu)}> all </span>
-                    <span className="work__item" onClick={() => filterItem
-                        ("software")}>software</span>
-                    <span className="work__item" onClick={() => filterItem
-                        ("music")}>music</span>
-                    <span className="work__item" onClick={() => filterItem
-                        ("dance")}>dance</span>
-                    <span className="work__item" onClick={() => filterItem
-                        ("literature")}>literature</span>
+                    <Link to="/portfolio" className={`work__item ${!category ? "active-filter" : ""}`} onClick={() => setItems(Menu)}> all </Link>
+                    <Link to="/portfolio/software" className={`work__item ${category === "software" ? "active-filter" : ""}`} onClick={() => { filterItem("software"); navigate("/portfolio/software"); }}>software</Link>
+                    <Link to="/portfolio/music" className={`work__item ${category === "music" ? "active-filter" : ""}`} onClick={() => { filterItem("music"); navigate("/portfolio/music"); }}>music</Link>
+                    <Link to="/portfolio/dance" className={`work__item ${category === "dance" ? "active-filter" : ""}`} onClick={() => { filterItem("dance"); navigate("/portfolio/dance"); }}>dance</Link>
+                    <Link to="/portfolio/literature" className={`work__item ${category === "literature" ? "active-filter" : ""}`} onClick={() => { filterItem("literature"); navigate("/portfolio/literature"); }}>literature</Link>
                 </div>
 
                 <div className="work__container grid">
@@ -49,10 +58,8 @@ const Portfolio = () => {
                     })}
                 </div>
             </div>
-
-
         </section>
     )
 }
 
-export default Portfolio
+export default Portfolio;

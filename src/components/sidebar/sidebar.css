@@ -57,8 +57,13 @@ ul {
 }
 
 .nav__link:hover {
-    color: hsl(13,93%,65%)
+    color: var(--first-color)
 }
+
+.active-link .nav__link {
+    color: var(--first-color)
+}
+
 
 .copyright {
     color: hsl(245, 15%, 65%);

@@ -1,51 +1,43 @@
 import React from 'react';
 import "./sidebar.css"
-import Logo from "../../assets/logo.svg";
-import { Link } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Sidebar = () => {
+    const location = useLocation();
+    const currentPath = location.pathname;
+
     return (
         <aside className='aside'>
-            <Link to="/" className="nav__logo">
-            </Link>
+            <NavLink to="/" className="nav__logo">
+            </NavLink>
 
             <nav className="nav">
                 <div className="nav__menu">
                     <ul className="nav_list">
-                        <li className="nav__item">
-                            <Link to="/" className="nav__link">
+                        <li className={`nav__item ${currentPath === "/" ? "active-link" : ""}`}>
+                            <NavLink to="/" className="nav__link">
                                 <i className="icon-home"></i>
-                            </Link>
+                            </NavLink>
                         </li>
-
-                        <li className="nav__item">
-                            <Link to="/about" className="nav__link">
+                        <li className={`nav__item ${currentPath === "/about" ? "active-link" : ""}`}>
+                            <NavLink to="/about" className="nav__link">
                                 <i className="icon-user-following"></i>
-                            </Link>
+                            </NavLink>
                         </li>
-
-                        <li className="nav__item">
-                            <Link to="/services" className="nav__link">
+                        <li className={`nav__item ${currentPath === "/resume" ? "active-link" : ""}`}>
+                            <NavLink to="/resume" className="nav__link">
                                 <i className="icon-briefcase"></i>
-                            </Link>
+                            </NavLink>
                         </li>
-
-                        <li className="nav__item">
-                            <Link to="/resume" className="nav__link">
-                                <i className="icon-graduation"></i>
-                            </Link>
-                        </li>
-
-                        <li className="nav__item">
-                            <Link to="/portfolio" className="nav__link">
+                        <li className={`nav__item ${currentPath.startsWith("/portfolio") ? "active-link" : ""}`}>
+                            <NavLink to="/portfolio" className="nav__link">
                                 <i className="icon-layers"></i>
-                            </Link>
+                            </NavLink>
                         </li>
-
-                        <li className="nav__item">
-                            <Link to="/contact" className="nav__link">
+                        <li className={`nav__item ${currentPath === "/contact" ? "active-link" : ""}`}>
+                            <NavLink to="/contact" className="nav__link">
                                 <i className="icon-bubble"></i>
-                            </Link>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>

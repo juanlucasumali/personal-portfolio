@@ -21,9 +21,18 @@
     cursor: pointer;
     font-weight: var(--font-bold);
     transition: .3s;
+    color: var(--title-color);
 }
 
 .work__item:hover {
+    color: var(--first-color);
+}
+
+.work__item:visited {
+    text-decoration: none;
+}
+
+.active-filter {
     color: var(--first-color);
 }
 

@@ -31,7 +31,6 @@ const data = [
 const Services = () => {
     return <section className="services container section" id= "services">
         <div className="services__title-container">
-            <h2 className="section__title">services</h2>
 
             <div className="services__container grid">
                 {data.map(({id, image, title, description}) => {
