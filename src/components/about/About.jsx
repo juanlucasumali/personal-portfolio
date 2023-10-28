@@ -17,9 +17,10 @@ const About = () => {
                     <div className="about__data grid">
                         <div className="about__info">
                             <p className="about__description">
-                                Hey! I'm Juan Lucas, an undergraduate at UC Berkeley studying computer science.
-                                When I'm not coding, I'm producing music, shooting films, or practicing dance.
-                                Here's hoping you and I can work together to build something this world needs!
+                                hey, thanks for stopping by! 
+                                i'm juan lucas, a computer science student at uc berkeley.
+                                when i'm not coding, i'm producing music, shooting films, or practicing dance. 
+                                here's hoping you and i can work together to build something meaningful!
                             </p>
                             <a href="" className="btn">download resume</a>
                         </div>

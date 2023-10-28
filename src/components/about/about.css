@@ -13,9 +13,10 @@
 
 .about__container {
     grid-template-columns: 1fr 9fr;
-    column-gap: 1.875rem;
     justify-content: center;
     z-index: 1;
+    padding-left: 7rem;
+    padding-right: 9rem;
 }
 
 .about__img {
@@ -31,7 +32,6 @@
     column-gap: 1.875rem;
     align-items: flex-start;
     position: relative;
-    margin-right: 6rem;
 }
 
 .about__data::before {
