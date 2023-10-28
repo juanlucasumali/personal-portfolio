@@ -17,9 +17,9 @@ const About = () => {
                     <div className="about__data grid">
                         <div className="about__info">
                             <p className="about__description">
-                                Hi! I'm Juan Lucas, an art and software enthusiast.
-                                I was born in the Philippines, raised in Hong Kong,
-                                and now I'm studying computer science @ UC Berkeley!
+                                Hey! I'm Juan Lucas, an undergraduate at UC Berkeley studying computer science.
+                                When I'm not coding, I'm producing music, shooting films, or practicing dance.
+                                Here's hoping you and I can work together to build something this world needs!
                             </p>
                             <a href="" className="btn">download resume</a>
                         </div>
