@@ -1,6 +1,5 @@
 import React from 'react';
 import "./sidebar.css"
-import Logo from "../../assets/logo.svg";
 
 const Sidebar = () => {
     return (
@@ -20,12 +19,6 @@ const Sidebar = () => {
                         <li className="nav__item">
                             <a href="#about" className="nav__link">
                                 <i className="icon-user-following"></i>
-                            </a>
-                        </li>
-
-                        <li className="nav__item">
-                            <a href="#services" className="nav__link">
-                                <i className="icon-briefcase"></i>
                             </a>
                         </li>
 

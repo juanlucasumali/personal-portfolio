@@ -8,14 +8,15 @@
 }
 
 .about__title-container {
-    margin-top: -7em;
+    margin-top: 0em;
 }
 
 .about__container {
     grid-template-columns: 1fr 9fr;
-    column-gap: 1.875rem;
     justify-content: center;
     z-index: 1;
+    padding-left: 7rem;
+    padding-right: 9rem;
 }
 
 .about__img {
@@ -27,11 +28,10 @@
     background-color: #efefef;
     box-shadow: var(--shadow);
     border-radius: var(--border-radius);
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     column-gap: 1.875rem;
     align-items: flex-start;
     position: relative;
-    margin-right: 6rem;
 }
 
 .about__data::before {
@@ -50,50 +50,60 @@
     margin-bottom: 1rem;
 }
 
-.about__skills {
-    row-gap: 1.25rem;
+.services__title-container {
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
-.skills__titles {
-    display: flex;
-    justify-content: space-between;
+.services__container {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.875rem;
+}
+
+.services__card {
+    text-align: center;
+    padding: 1.875rem;
+    border-radius: var(--border-radius);
+    background-color: var(--container-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.services__card:hover {
+    transform: translateY(-10px);
+}
+
+.services__card:nth-child(1) {
+    background-color: rgb(108, 108, 229);
+    box-shadow: 0px 5px 20px 0px rgb(108, 108, 229 / 50%);
+}
+
+.services__card:nth-child(2) {
+    background-color: rgb(249, 215, 76);
+    box-shadow: 0px 5px 20px 0px rgb(249, 215, 76 / 50%);
+}
+
+.services__card:nth-child(3) {
+    background-color: rgb(249, 123, 139);
+    box-shadow: 0px 5px 20px 0px rgb(249, 123, 139 / 50%);
+}
+
+.services__img {
+    margin-bottom: 1rem;  
+    width: 2.5rem;
+}
+
+.services__title {
+    font-size: var(--h3-font-size);
     margin-bottom: 1rem;
+    color: #fff;
 }
 
-.skills__name {
-    font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
+.services__description {
+    color: #f8f9fa;
 }
 
-.skills__number {
-    line-height: 1.2;
-}
-
-.skills__bar,
-.skills__percentage {
-    height: 7px;
-    border-radius: 0.25rem;
-}
-
-.skills__bar {
-    background-color: #f1f1f1;
-}
-
-.skills__percentage {
-    display: block;
-}
-
-.development {
-    width: 90%;
-    background-color: rgb(255, 209, 92);
-}
-
-.ui__design {
-    width: 80%;
-    background-color: rgb(255, 76, 96);
-}
-
-.photography {
-    width: 60%;
-    background-color: rgb(108, 108, 299);
+.services__card:nth-child(2) .services__title {
+    color: var(--title-color);
 }

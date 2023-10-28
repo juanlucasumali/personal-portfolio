@@ -114,6 +114,8 @@ img {
 .section {
   padding-top: 7rem;
   padding-bottom: 2rem;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 
 .section__title {
@@ -160,4 +162,9 @@ img {
 
 .btn::hover {
   animation: button-push 0.3s linear 1;
+}
+
+/*==================== Scroll Snapping ====================*/
+html {
+  scroll-snap-type: y mandatory;
 }
