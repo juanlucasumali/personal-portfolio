@@ -32,6 +32,26 @@ const AppContent = () => {
     }
   };
 
+  const handleWheel = (event) => {
+    // Check if user is scrolling up and they are at the top of the page
+    if (event.deltaY < 0 && window.scrollY === 0) {
+      event.preventDefault();
+    }
+
+    // Check if user is scrolling down and they are at the bottom of the page
+    if (event.deltaY > 0 && window.scrollY === document.documentElement.scrollHeight - window.innerHeight) {
+      event.preventDefault();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('wheel', handleWheel, { passive: false });
+
+    return () => {
+      window.removeEventListener('wheel', handleWheel);
+    };
+  }, []);
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
