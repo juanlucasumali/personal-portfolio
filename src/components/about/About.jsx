@@ -48,7 +48,6 @@ const About = () => {
                                 when i'm not coding, i'm producing music, shooting films, or practicing dance. 
                                 here's hoping you and i can work together to build something meaningful!
                             </p>
-                            <a href="" className="btn">download resume</a>
                         </div>
 
                     </div>

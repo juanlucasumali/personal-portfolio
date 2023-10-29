@@ -53,8 +53,6 @@
 .services__title-container {
     padding-top: 7rem;
     padding-bottom: 2rem;
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
 }
 
 .services__container {
