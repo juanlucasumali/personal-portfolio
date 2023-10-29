@@ -16,8 +16,6 @@ const Home = () => {
                 
                 <HeaderSocials />
 
-                <ScrollDown />
-
                 </div>
             </selection>
         </div>
