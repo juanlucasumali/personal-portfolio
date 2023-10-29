@@ -1,10 +1,14 @@
 import React from 'react';
 import "./sidebar.css"
 
-const Sidebar = () => {
+const Sidebar = ({ onUserInitiatedScroll = () => {} }) => {
 
     const handleNavClick = (e, targetId) => {
         e.preventDefault();
+
+        // Notify that user initiated a scroll
+        onUserInitiatedScroll(true);
+
         const target = document.getElementById(targetId);
         if (target) {
             target.scrollIntoView({ behavior: 'smooth' });
@@ -16,6 +20,7 @@ const Sidebar = () => {
             <a href="#home" className="nav__logo">
                 {/* Add any content or image here if you want */}
             </a>
+            
 
             <nav className="nav">
                 <div className="nav__menu">
