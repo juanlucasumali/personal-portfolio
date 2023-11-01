@@ -116,7 +116,7 @@ img {
   padding-top: 7rem;
   padding-bottom: 2rem;
   scroll-snap-align: center;
-  scroll-snap-stop: always;
+  scroll-snap-stop: normal;
 }
 
 .section__title {
