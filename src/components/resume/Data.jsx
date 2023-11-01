@@ -5,7 +5,7 @@ const Data = [
         icon: "icon-briefcase",
         year: "August 2023 - Present",
         title: "CNMAT - Undergraduate Researcher",
-        desc: "Developed an application using the Stable Diffusion codebase and Essentia.js (a JavaScript library for audio signal analysis) to genereate music videos from an input audio."
+        desc: "Developed an application using an open-source Stable Diffusion codebase and Essentia.js (a JavaScript library for audio signal analysis) to genereate music videos from an input audio."
     },
     {
         id: 2,

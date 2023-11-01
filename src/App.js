@@ -22,7 +22,7 @@ const AppContent = () => {
   const location = useLocation();
 
   const handleScroll = () => {
-    const sections = ['/', '/about', '/resume', '/portfolio', '/contact'];
+    const sections = ['/', '/about', '/resume', '/contact']; // Removed /portfolio
     const scrollY = window.scrollY;
     const height = window.innerHeight;
     const currentSectionIndex = Math.round(scrollY / height);
@@ -67,7 +67,7 @@ const AppContent = () => {
         <Home />
         <About />
         <Resume />
-        <Portfolio />
+        {/* <Portfolio /> */}
         <Contact />
       </main>
     </>
