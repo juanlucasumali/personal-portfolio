@@ -17,8 +17,7 @@ const Sidebar = ({ onUserInitiatedScroll = () => {} }) => {
 
     return (
         <aside className='aside'>
-            <a href="#home" className="nav__logo">
-                {/* Add any content or image here if you want */}
+            <a href="#home" className="nav__logo"onClick={(e) => handleNavClick(e, 'home')}>
             </a>
             
 
@@ -43,11 +42,11 @@ const Sidebar = ({ onUserInitiatedScroll = () => {} }) => {
                             </a>
                         </li>
 
-                        <li className="nav__item">
+                        {/* <li className="nav__item">
                             <a href="#portfolio" className="nav__link" onClick={(e) => handleNavClick(e, 'portfolio')}>
                                 <i className="icon-layers"></i>
                             </a>
-                        </li>
+                        </li> */}
 
                         <li className="nav__item">
                             <a href="#contact" className="nav__link" onClick={(e) => handleNavClick(e, 'contact')}>

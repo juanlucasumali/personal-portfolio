@@ -9,8 +9,8 @@ const Home = () => {
         <selection className="home container section" id="home">
             <div className="intro">
                 <Uno />
-                <h1 className="home__name">juan lucas umali</h1>
-                <span className="home__education">art x software
+                <h1 className="home__name">Juan Lucas Umali</h1>
+                <span className="home__education">Art x Software
                 </span>
             
             <HeaderSocials />

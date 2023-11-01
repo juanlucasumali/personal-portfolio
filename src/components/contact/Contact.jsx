@@ -1,11 +1,14 @@
 import React from 'react';
 import "./contact.css"
+import HeaderSocials from '../home/HeaderSocials';
 
 const Contact = () => {
     return (
         <section className="contact container section centered" id="contact">
-            <h3 className="contact__title centered">let's talk about everything</h3>
-            <p className="contact__details centered">don't like forms? shoot me an email at: juanlucasumali@berkeley.edu</p>
+            <h3 className="contact__title centered">Think we can work together? Let me know below!</h3>
+        
+            <HeaderSocials />
+        
         </section>
     );
 }

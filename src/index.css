@@ -5,10 +5,11 @@
 :root {
   /*=============== Colors ===============*/
   /*Color mode HSL (hue, saturation, lightness)*/
-  --first-color:  hsl(13,93%,65%);
+  --first-color:  hsl(168,46%,35%);
+  --second-color: hsl(33,100%,71%);
   --title-color: hsl(45,8%,20%);
   --subtitle-color: hsl(50,2%,48%);
-  --text-color: hsl(244, 16%, 43%);
+  --text-color: hsl(45,8%,20%);;
   --body-color: hsl(0,5%,96%);
   --container-color: hsl(0,0%,94%);
 
@@ -147,21 +148,13 @@ img {
   display: inline-block;
   background-color: var(--first-color);
   font-weight:  var(--font-bold); 
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;  /* Add this line */
 }
 
-@keyframes button-push {
-  50% {
-    transform: scale(0.8);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-
-}
-
-.btn::hover {
-  animation: button-push 0.3s linear 1;
+.btn:hover {
+  background-color: var(--second-color);
+  color: var(--title-color);
+  box-shadow: 0 0 10px var(--second-color);  /* Add a faint shadow */
 }
 
 /*==================== Scroll Snapping ====================*/

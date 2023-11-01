@@ -22,7 +22,7 @@ ul {
     width: 2rem; 
     height: 2rem; 
     border-radius: 50%;  
-    background-color: #f97855;  
+    background-color: var(--first-color);  
     text-align: center;
     line-height: 2rem; /* Adjusted from 128px to match the height for vertical centering */
     overflow: hidden; 
@@ -30,7 +30,7 @@ ul {
 }
 
 .nav__logo:hover {
-    box-shadow: 0 0 8px #ff7f00, 0 0 15px #ff7f00, 0 0 22px #ff7f00;
+    box-shadow: 0 0 8px var(--first-color), 0 0 15px var(--first-color), 0 0 22px var(--first-color);
 }
 
 @keyframes pulse {
@@ -57,7 +57,11 @@ ul {
 }
 
 .nav__link:hover {
-    color: hsl(13,93%,65%)
+    color: var(--first-color);
+}
+
+.nav__link.active {
+    color: var(--first-color);
 }
 
 .copyright {
@@ -65,4 +69,8 @@ ul {
     font-size: var(--small-font-size);
     transform: rotate(-180deg);
     writing-mode: vertical-rl;
+}
+
+.active-link .nav__link {
+    color: var(--first-color)
 }

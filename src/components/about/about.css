@@ -25,7 +25,7 @@
 
 .about__data {
     padding: 1.875rem;
-    background-color: #efefef;
+    background-color: var(--container-color);
     box-shadow: var(--shadow);
     border-radius: var(--border-radius);
     grid-template-columns: repeat(1, 1fr);
@@ -40,7 +40,7 @@
     height: 0;
     border-top: 10px solid transparent;
     border-bottom: 10px soldi transparent;
-    border-right: 15px solid #efefef;
+    border-right: 15px solid var(--container-color);
     position: absolute;
     left: -0.93rem;
     top: 20%;
@@ -64,44 +64,69 @@
     text-align: center;
     padding: 1.875rem;
     border-radius: var(--border-radius);
-    background-color: var(--container-color);
+    background-color: rgb(239,239,239);
     transition: all 0.3s ease-in-out;
 }
 
-.services__card:hover {
+.services__card:hover{
     transform: translateY(-10px);
+    background-color: var(--first-color);
+}
+
+.services__card:hover .services__description{
+    color: white;
+}
+
+.services__card:hover .services__title {
+    color: var(--second-color)
+}
+
+.services__card:hover .full-stack {
+    stroke: var(--second-color);
+    fill: none;
+}
+
+.services__card:hover .ds-1, 
+.services__card:hover .ds-2, 
+.services__card:hover .ds-3, 
+.services__card:hover .ds-4, 
+.services__card:hover .ds-5 {
+    fill: var(--second-color);
+}
+
+.services__card:hover .music-production svg path {
+    fill: var(--second-color);
 }
 
 .services__card:nth-child(1) {
-    background-color: rgb(108, 108, 229);
-    box-shadow: 0px 5px 20px 0px rgb(108, 108, 229 / 50%);
+    box-shadow: var(--shadow);
 }
 
 .services__card:nth-child(2) {
-    background-color: rgb(249, 215, 76);
-    box-shadow: 0px 5px 20px 0px rgb(249, 215, 76 / 50%);
+    box-shadow: var(--shadow);
 }
 
 .services__card:nth-child(3) {
-    background-color: rgb(249, 123, 139);
-    box-shadow: 0px 5px 20px 0px rgb(249, 123, 139 / 50%);
+    box-shadow: var(--shadow);
+}
+
+.full-stack {
+    stroke: black;
+    fill: none;
 }
 
 .services__img {
-    margin-bottom: 1rem;  
-    width: 2.5rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    padding-bottom: 0.5rem;
 }
 
 .services__title {
     font-size: var(--h3-font-size);
     margin-bottom: 1rem;
-    color: #fff;
+    color: var(--title-color);
 }
 
 .services__description {
-    color: #f8f9fa;
-}
-
-.services__card:nth-child(2) .services__title {
-    color: var(--title-color);
+    color: var(--subtitle-color);
 }

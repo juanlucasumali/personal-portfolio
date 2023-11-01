@@ -7,7 +7,7 @@ const Resume = () => {
     return (
         <section className="resume container section" id="resume">
             <div className="resume__title-container">
-                <h2 className="section__title">experience</h2>
+                <h2 className="section__title">Experience</h2>
 
                 <div className="resume__container grid">
                     <div className="timeline grid">
@@ -42,6 +42,9 @@ const Resume = () => {
                         })}
                     </div>
                 </div>
+            </div>
+            <div className="resume__download">
+                <a target="_blank" href="https://drive.google.com/file/d/1cxrv76EEVwCdVAfCgjyfT0CnBAxa2Rq9/view?usp=sharing" className="btn">Download Resume</a>
             </div>
         </section>
     )
