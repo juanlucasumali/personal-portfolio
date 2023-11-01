@@ -43,6 +43,9 @@ const Resume = () => {
                     </div>
                 </div>
             </div>
+            <div className="resume__download">
+                <a target="_blank" href="https://drive.google.com/file/d/1cxrv76EEVwCdVAfCgjyfT0CnBAxa2Rq9/view?usp=sharing" className="btn">Download Resume</a>
+            </div>
         </section>
     )
 }

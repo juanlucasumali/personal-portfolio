@@ -72,14 +72,14 @@ const Uno = () => {
             onMouseEnter={() => setHovered(true)} 
             onMouseLeave={() => setHovered(false)}
         >
-            <rect x="0" y="0" width="36" height="36" transform={`translate(${shadowPos.x} ${shadowPos.y + 2}) rotate(87 18 18) scale(1)`} fill="#f97855" rx="36"></rect>
+            <rect x="0" y="0" width="36" height="36" transform={`translate(${shadowPos.x} ${shadowPos.y + 2}) rotate(87 18 18) scale(1)`} fill="var(--first-color)" rx="36"></rect>
             <g transform={`translate(${facePos.x} ${facePos.y})`}>
                 {hovered ? 
-                    <circle cx="18" cy="20" r="3" fill="#000000" /> : 
-                    <path d="M15 18c2 1 4 1 6 0" stroke="#000000" fill="none" strokeLinecap="round"></path>
+                    <circle cx="18" cy="20" r="3" fill="var(--second-color)" /> : 
+                    <path d="M15 18c2 1 4 1 6 0" stroke="var(--second-color)" fill="none" strokeLinecap="round"></path>
                 }
-                <rect x="10" y="15" width="1.5" height="2" rx="1" stroke="none" fill="#000000" transform={`translate(${leftEyePos.x} ${leftEyePos.y})`}></rect>
-                <rect x="24" y="15" width="1.5" height="2" rx="1" stroke="none" fill="#000000" transform={`translate(${rightEyePos.x} ${rightEyePos.y})`}></rect>
+                <rect x="10" y="15" width="1.5" height="2" rx="1" stroke="none" fill="var(--second-color)" transform={`translate(${leftEyePos.x} ${leftEyePos.y})`}></rect>
+                <rect x="24" y="15" width="1.5" height="2" rx="1" stroke="none" fill="var(--second-color)" transform={`translate(${rightEyePos.x} ${rightEyePos.y})`}></rect>
             </g>
         </svg>
     );
